@@ -7,7 +7,7 @@ int main() {
 	while (i < 5) {
 		std::cout << i << "\n";
 		i++;
-		print("š ");
+		print("â˜… ");
 		print(0);
 	}
 	return 0;
