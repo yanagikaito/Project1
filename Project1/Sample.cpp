@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <iostream>
-#include "lib.h"
+#include "lib\lib.cpp"
 int main() {
 	print("Hello");
 	print(2);
