@@ -1,32 +1,17 @@
 #include <stdio.h>
 #include <iostream>
-#include "lib\lib.cpp"
-#define MAX_VALUE (5)
-#define DEBUG
 
 int main() {
 
-	// デバッグ開始
-#ifdef DEBUG
+    int arr[10];
+    arr[0] = 1;
+    arr[1] = 2;
+    arr[2] = 3;
 
-	int i = 0;
+    printf("%d\n", arr[0]);  
+    printf("%d\n", arr[1]);  
+    printf("%d\n", arr[2]);  
+    printf("%d\n", arr[3]);  
 
-	while (i < MAX_VALUE) {
-		std::cout << i << "\n";
-		i++;
-		print("* ");
-		print(0);
-	}
-	return -1;
-
-	// デバッグ終了
-#endif // DEBUG
-	
-	while (i < MAX_VALUE) {
-		std::cout << i << "\n";
-		i++;
-		print("* ");
-		print(0);
-	}
 	return 0;
 }
