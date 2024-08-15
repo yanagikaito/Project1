@@ -12,12 +12,12 @@ int main() {
 
     scanf_s("%d%*n", &p);
 
-    for (int* i = 0; i < p; i++) {
-        for (int* j = 0; j < p; j++) {
-            j = j + 1;
+    for (int* i = 0; i < p;) {
+        for (int* j = 0; j < p;) {
+            j++;
             printf("j‚Ì’l = j:%d\n", j);
         }
-        i = i + 1;
+        i++;
         printf("i‚Ì’l = i:%d\n", i);
     }
     return 0;
