@@ -1,35 +1,24 @@
 #include <stdio.h>
 #include <iostream>
+#define NUM (3)
 
 int main() {
 
-    int a[3];
-
-    for (int i = 0; i < 3; i++) {
-        a[i] = i + 1;
-    }
-
-
-    /* a[0] = 1;
-     a[1] = 2;
-     a[2] = 3;*/
+    int n[] = { NUM };
 
     int* p;
 
-    // []をとったものがアドレスとなる。
+    p = n;
 
-    // 配列の場合は先頭アドレス
+    scanf_s("%d%*n", &p);
 
-    p = a;
-
-    for (int i = 0; i < 3; i++) {
-        p[i] = 0;
-        printf("%d\n", a[i]);
+    for (int* i = 0; i < p; i++) {
+        for (int* j = 0; j < p; j++) {
+            j = j + 1;
+            printf("jの値 = j:%d\n", j);
+        }
+        i = i + 1;
+        printf("iの値 = i:%d\n", i);
     }
-
-    /* p[0] = 0;
-     p[1] = 0;
-     p[2] = 0;*/
-
     return 0;
 }
