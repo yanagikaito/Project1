@@ -2,10 +2,15 @@
 #include <iostream>
 #define NUM (3)
 
-void setArray(int* p) {
+struct V {
 
-    for (int* i = 0; i < p;) {
-        for (int* j = 0; j < p;) {
+    int x;
+};
+
+void setArray(V* p) {
+
+    for (V* i = 0; i < p;) {
+        for (V* j = 0; j < p;) {
             j++;
             printf("j‚Ì’l = j:%d\n", j);
         }
@@ -16,9 +21,9 @@ void setArray(int* p) {
 
 int main() {
 
-    int n[] = { NUM };
+    struct V n[NUM];
 
-    int* p;
+    struct V* p;
 
     p = n;
 
