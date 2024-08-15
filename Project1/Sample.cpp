@@ -1,26 +1,35 @@
 #include <stdio.h>
 #include <iostream>
-#include "V.h"
-
-void setStruct(struct V* p) {
-
-    p->x = 1;
-    p->y = 2;
-}
 
 int main() {
 
-    struct V a;
-    a = { NUM_X,NUM_Y };
+    int a[3];
 
-    // struct V* p;
-    // p = &a;
-    // p->x = 0;
-    // p->y = 0;
+    for (int i = 0; i < 3; i++) {
+        a[i] = i + 1;
+    }
 
-    setStruct(&a);
 
-    printf("%d %d\n", a.x, a.y);
+    /* a[0] = 1;
+     a[1] = 2;
+     a[2] = 3;*/
+
+    int* p;
+
+    // []をとったものがアドレスとなる。
+
+    // 配列の場合は先頭アドレス
+
+    p = a;
+
+    for (int i = 0; i < 3; i++) {
+        p[i] = 0;
+        printf("%d\n", a[i]);
+    }
+
+    /* p[0] = 0;
+     p[1] = 0;
+     p[2] = 0;*/
 
     return 0;
 }
