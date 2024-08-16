@@ -4,27 +4,31 @@
 
 struct V {
 
+    // 4バイト
     int x;
 };
 
-void setArray(V* p) {
+void setArray(int* p) {
 
-    for (V* i = 0; i < p;) {
-        for (V* j = 0; j < p;) {
-            j++;
+    for (int* i = 0; i < p;) {
+        for (int* j = 0; j < p;) {
+            // ループごとにスタック領域に4バイト追加される
+            j = j + 1;
             printf("jの値 = j:%d\n", j);
         }
-        i++;
+        // ループごとにスタック領域に4バイト追加される
+        i = i + 1;
         printf("iの値 = i:%d\n", i);
     }
 }
 
 int main() {
 
-    struct V n[NUM];
+    int n[NUM];
 
-    struct V* p;
+    int* p;
 
+    // nの先頭アドレスが書き込まれる。
     p = n;
 
     scanf_s("%d", &p);
