@@ -5,14 +5,15 @@
 struct V {
 
     int x;
+    int y;
 };
 
-void setArray(int* p) {
-    for (int* j = 0; j < p;) {
+void setArray(V* p) {
+    for (V* j = 0; j < p;) {
         j = j + 1;
         printf("p‚Ì’l = p:%d\n", p);
         printf("j‚Ì’l = j:%d\n", j);
-        for (int* i = 0; i < p;) {
+        for (V* i = 0; i < p;) {
             i = i + 1;
             printf("i‚Ì’l = i:%d\n", i);
         }
@@ -21,9 +22,9 @@ void setArray(int* p) {
 
 int main() {
 
-    int n[NUM];
+    struct V n[NUM];
 
-    int* p;
+    struct V* p;
 
     p = n;
 
