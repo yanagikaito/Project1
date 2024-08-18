@@ -7,25 +7,29 @@ struct V {
     int x;
 };
 
+void setArray(int* p) {
+    for (int* j = 0; j < p;) {
+        j = j + 1;
+        printf("p‚Ì’l = p:%d\n", p);
+        printf("j‚Ì’l = j:%d\n", j);
+        for (int* i = 0; i < p;) {
+            i = i + 1;
+            printf("i‚Ì’l = i:%d\n", i);
+        }
+    }
+}
+
 int main() {
 
-    struct V n[NUM];
+    int n[NUM];
 
-    n[0].x = 0;
-    n[1].x = 1;
-    n[2].x = 2;
-
-    struct V* p;
+    int* p;
 
     p = n;
 
-    p[0].x = 3;
-    p[1].x = 4;
-    p[2].x = 5;
+    scanf_s("%d", &p);
 
-    for (int i = 0; i < 3; i++) {
-        p[i];
-        printf("%d\n", p[i]);
-    }
+    setArray(p);
+
     return 0;
 }
