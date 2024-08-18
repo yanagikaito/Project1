@@ -9,6 +9,9 @@ struct V {
 };
 
 void setArray(V* p) {
+
+    // int型はサイズが4バイトのためポインタ変数をインクリメントすると4バイト先のアドレスを指します．
+
     for (V* j = 0; j < p;) {
         j = j + 1;
         printf("pの値 = p:%d\n", p);
